@@ -150,7 +150,7 @@ def calculate_tax(salaries):
     return [s * 0.10 for s in salaries]
 
 
-salaries = [20000, 50000, 100000]
+salaries = [20000, 50000, 100000]  
 print(calculate_tax(salaries))
 
 #. Mini Project
