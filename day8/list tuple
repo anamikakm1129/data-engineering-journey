@@ -1,0 +1,126 @@
+#1. Basic List Operations
+numbers = [10, 20, 30, 40, 50]
+print("The first element is:",numbers[0])# - print first element
+print("The last element is:",numbers[-1])# - print last element
+print("The length of list:",len(numbers))
+numbers[1] = 25# - update second element
+print(numbers)
+
+#2. Append & Remove
+data = [1,2,3]
+data.append(4)
+data.remove(2)
+print(data)
+
+#3. Sum Without sum()
+numbers = [5,10,15,20]
+sum = 0
+for num in numbers:
+    sum = sum + num
+print("The sum is:",sum)
+
+#4. Find Largest Number
+numbers = [12,45,7,89,23]
+largest = numbers[0]  
+for i in numbers:
+    if i > largest:
+        largest = i
+print("the largest number is:",largest)
+
+#5. Filter Even Numbers
+numbers = [1,2,3,4,5,6]
+even_list = []
+for i in numbers:
+    if i % 2 == 0:
+        even_list.append(i)
+print(even_list)
+
+#6. Remove Duplicates
+data = [1,2,2,3,4,4,5]
+unique_list = []
+for i in numbers:
+    if i is not unique_list:
+        unique_list.append(i)
+print(unique_list)
+
+#7. Reverse List
+data = [10,20,30,40]
+print(data[::-1])
+
+#8. Count Frequency
+data = [1,1,2,3,3,3]
+frequency = {}
+for i in data:
+    if i in frequency:
+        frequency[i]+=1
+    else:
+        frequency[i] = 1
+print(frequency)
+
+#9. Data Cleaning
+raw_data = ["10", "", "abc", "25", None, "50"]
+valid_numbers = []
+
+for item in raw_data:
+    # Check None first
+    if item is not None:
+        item = item.strip()
+
+        # Check if numeric
+        if item.isdigit():
+            valid_numbers.append(int(item))
+
+print(valid_numbers)
+
+#10. Nested List
+matrix = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+for row in matrix:
+    for item in row:
+        print(item, end=" ")  # Prints items side-by-side with a space
+    print()                   # Moves to the next line after each row is done
+
+#11. Tuple Basics
+data = (10,20,30,40)
+print(data[0])# print first element
+print(len(data))#print length
+
+#12. Tuple vs List
+# Create:
+# one list
+# one tuple
+# Try changing values
+# Observe difference
+list = [10,20.30,40,45]
+#tuple = (20,30,35,40)
+list.append(25)
+#tuple.append(10)
+print(list)
+#print(tuple)
+
+#13. Unpacking Tuple
+person = ("Anamika", 20, "Delhi")
+x ,y,z = person
+print(x)
+print(y)
+print(z)
+
+#14. Tuple in Data Records
+employees = [
+    ("A", 50000),
+    ("B", 70000),
+    ("C", 40000)
+]
+for name,salary in employees:
+    if salary > 50000:
+        print(name)
+
+#15. Convert List ↔ Tuple
+my_list = [1, 2, 3]
+my_tuple = tuple(my_list)
+
+print(my_tuple)     
+
